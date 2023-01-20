@@ -27,9 +27,9 @@ class Funcionario:
         return nome_quebrado[-1]
 
     def calcular_bonus(self):
-        valor = self._salario * 1.0
+        valor = self._salario * 0.1
         if valor > 1000:
-            valor = 0
+            raise Exception('O Salario é muito alto pare receber um bonus')
         return valor
 
     def _eh_socio(self):
